@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  font-family: var(--font-inter);
+}
+
+.font-display {
+  font-family: var(--font-poppins);
+}
+
+.gradient-ring {
+  position: relative;
+}
+
+.gradient-ring::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  z-index: -1;
+  border-radius: inherit;
+  background: radial-gradient(circle at top left, rgba(249, 115, 22, 0.55), transparent 65%),
+    radial-gradient(circle at bottom right, rgba(59, 130, 246, 0.45), transparent 70%);
+  filter: blur(0);
+  opacity: 0.9;
+}
+
+.section-heading {
+  @apply font-display text-3xl font-semibold tracking-tight text-white sm:text-4xl;
+}
+
+.section-subtitle {
+  @apply mt-4 max-w-2xl text-base text-slate-300;
+}
